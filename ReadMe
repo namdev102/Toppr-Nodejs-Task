@@ -1,0 +1,25 @@
+1. Unzip the folder
+2. Enter into directory and execute command "npm install" to install dependencies
+3. DATA DUMP : Now execute command "npm start" this will generate a text file JsonData.json which contains the imported data
+   from battles.csv and dumped into mongodb (code for dumping data is written in routes/dump.js)
+4. LIST : To list the all the places data i.e. (location + region ) first un command "npm start" and
+   then hit the end point "https//localhost:3000/toppr/list"
+5. COUNT : To get the count of places data hit the endpoint "https//localhost:3000/toppr/count"
+6. STATS : To get the stats hit the endpoint "https//localhost:3000/toppr/stats"
+7. SEARCH : To get the search/query based results hit the end point "http://localhost:3000/toppr/search?q={queryString}"
+    for example : "http://localhost:3000/toppr/search?q=battle"
+
+** Because of the time constraint i had implemented search/query filter only on "name" attribute, please consider it.
+
+Note : To use the search filter url should be in this format "http://localhost:3000/toppr/search?q={queryString}"
+       because of the time constraint i had to use the get() method. Please consider it while evaluation.
+
+
+commands :
+DATA DUMP : npm start (code written in routes/dump.js)
+
+(codes for below apis are written in routes/toppr.js along with thier utility functions)
+LIST : get() request to the end point "https//localhost:3000/toppr/list"
+COUNT : get() request to the end point "https//localhost:3000/toppr/count"
+STATS : get() request to the end point "https//localhost:3000/toppr/stats"
+SEARCH : get() request to the end point "http://localhost:3000/toppr/search?q={queryString}"
